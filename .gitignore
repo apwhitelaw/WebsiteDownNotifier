@@ -1,0 +1,4 @@
+# ignore AuthKeys
+
+**/AuthKeys.class
+**/AuthKeys.java
