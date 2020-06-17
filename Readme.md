@@ -1,4 +1,4 @@
-![Example of email notification](ExampleScreenshot.PNG?raw=true "Screenshot")
+![Example of email notification](ExampleScreenshot.PNG?raw=true)
 
 # WebsiteDownNotifier
 
