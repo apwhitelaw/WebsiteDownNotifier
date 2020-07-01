@@ -17,7 +17,7 @@ public class Notifier {
         System.out.print("Please enter the email where you would like to receive alerts: ");
         recipient = scan.nextLine();
         System.out.print("Please enter the website you would like to track: ");
-        pinger.website = scan.nextLine();
+        pinger.setWebsite(scan.nextLine());
 
         Emailer emailer = new Emailer(recipient, sender);
 
@@ -27,12 +27,12 @@ public class Notifier {
             public void run() {
                 boolean success = pinger.ping();
                 if(!success) {
-                    System.out.printf("%s %d/5", success, pinger.downCount);
+                    System.out.printf("%s %d/5", success, pinger.getDownCount());
                 } else {
                     System.out.println(success);
                 }
-                if(pinger.downCount == 5) {
-                    emailer.sendEmail(pinger.website);
+                if(pinger.getDownCount() == 5) {
+                    emailer.sendEmail(pinger.getWebsite());
                 }
             }
         }, 0, 10000);

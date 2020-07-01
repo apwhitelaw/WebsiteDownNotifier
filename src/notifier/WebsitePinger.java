@@ -5,8 +5,8 @@ import java.net.URL;
 
 public class WebsitePinger {
 
-    String website = "";
-    int downCount = 0;
+    private String website = "";
+    private int downCount = 0;
 
     public boolean ping() {
         int responseCode = 0;
@@ -37,4 +37,15 @@ public class WebsitePinger {
         return false;
     }
 
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public int getDownCount() {
+        return downCount;
+    }
 }
